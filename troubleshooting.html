@@ -485,17 +485,23 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
 </div></details>
 
 <details class="spoiler"><summary class="spoiler-title">Проблемы после копирования файлов на карту на маке/В Homebrew Menu/Tinfoil пусто, хотя на карте всё есть</summary><div class="spoiler-body">
-<ol>
-  <li>В <strong>hekate</strong> перейдите в меню <strong>Tools</strong>, переключитесь на вкладку <strong>Arch bit • RCM • Touch • Partitions</strong> (в нижней части экрана), выберите <strong>Fix Archive Bit</strong>
-    <ul>
-      <li>Чтобы попасть в hekate, если вы находитесь не в ней, перезагрузите приставку, для этого удерживайте 5 секунд кнопку питания, находясь в кастомной прошивке, затем выберите <strong>Параметры электропитания</strong> -&gt; <strong>Перезагрузка</strong>. Когда появится сплешскин кефира, нажмите (VOL-) (кнопка понижения громкости)</li>
-    </ul>
+<ul>
+  <li>Убедитесь, что имя вашей карты отлично от <code class="language-plaintext highlighter-rouge">Switch</code> в любой комбинации строчных или заглавных букв</li>
+  <li>
+    <ol>
+      <li>В <strong>hekate</strong> перейдите в меню <strong>Tools</strong>, переключитесь на вкладку <strong>Arch bit • RCM • Touch • Partitions</strong> (в нижней части экрана), выберите <strong>Fix Archive Bit</strong>
+        <ul>
+          <li>Чтобы попасть в hekate, если вы находитесь не в ней, перезагрузите приставку, для этого удерживайте 5 секунд кнопку питания, находясь в кастомной прошивке, затем выберите <strong>Параметры электропитания</strong> -&gt; <strong>Перезагрузка</strong>. Когда появится сплешскин кефира, нажмите (VOL-) (кнопка понижения громкости)</li>
+        </ul>
+        <ol>
+          <li>После окончания фикса атрибутов, нажмите <strong>Close</strong> в верхнем правом углу</li>
+          <li>Выберите <strong>Home</strong> -&gt; <strong>Launch</strong> - &gt;<strong>YOUR_OS_NAME</strong>, чтобы загрузиться обратно в прошивку</li>
+        </ol>
+      </li>
+    </ol>
   </li>
-  <li>После окончания фикса атрибутов, нажмите <strong>Close</strong> в верхнем правом углу</li>
-  <li>Выберите <strong>Home</strong> -&gt; <strong>Launch</strong> - &gt;<strong>YOUR_OS_NAME</strong>, чтобы загрузиться обратно в прошивку</li>
-</ol>
-
-<p>Если вы пользователь MacOS и вам не помог способ выше, выполните следующую команду: <code class="language-plaintext highlighter-rouge">sudo chflags -R arch /Volumes/&lt;name of SD card&gt;</code></p>
+  <li>Если вы пользователь MacOS и вам не помог способ выше, выполните следующую команду: <code class="language-plaintext highlighter-rouge">sudo chflags -R arch /Volumes/&lt;name of SD card&gt;</code></li>
+</ul>
 
 </div></details>
 
