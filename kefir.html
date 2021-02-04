@@ -306,7 +306,7 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
 <nav class="toc">
     <header><h4 class="nav__title"><i class="fa fa-file-text"></i> Разделы</h4></header>
 <ul class="toc__menu" id="markdown-toc">
-  <li><a href="#kefir-508" id="markdown-toc-kefir-508">KEFIR 508</a>    <ul>
+  <li><a href="#kefir-509" id="markdown-toc-kefir-509">KEFIR 509</a>    <ul>
       <li><a href="#что-такое-кефир" id="markdown-toc-что-такое-кефир">Что такое кефир</a></li>
       <li><a href="#инструкция-по-установке-kefir" id="markdown-toc-инструкция-по-установке-kefir">Инструкция по установке kefir</a></li>
     </ul>
@@ -331,7 +331,7 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
 
 <hr />
 
-<h2 id="kefir-508">KEFIR 508</h2>
+<h2 id="kefir-509">KEFIR 509</h2>
 
 <p class="text-center"><img src="/images/kefir.png" alt="kefir" width="70%" /></p>
 
@@ -376,7 +376,7 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
       <li><a href="https://github.com/devgru/FreshHay/releases" target="_blank">FreshHay</a> - программа для скачивания и распаковки рекомендуемой версии системного ПО прямо на приставке</li>
       <li><a href="https://github.com/joel16/NX-Shell/releases/latest" target="_blank">NX-Shell</a> - файловый менеджер</li>
       <li><a href="https://github.com/tallbl0nde/NX-Activity-Log/releases/latest" target="_blank">NX-Activity-Log</a> - программа, позволяющая отслеживать время, проведённое в играх</li>
-      <li><a href="https://github.com/thedax/NX-ntpc" target="_blank">nx-ntpc</a> - NTP-клиент для Nintendo Switch. Позволяет подтянуть корректное время и дату с серверов синхронизации времени в интернете</li>
+      <li><strong>nx-ntpc</strong> - NTP-клиент для Nintendo Switch. Позволяет подтянуть корректное время и дату с серверов синхронизации времени в интернете</li>
       <li><a href="https://github.com/J-D-K/JKSV/releases" target="_blank">JKSV</a> - программа для резервного копирования и восстановления сейвов</li>
       <li><a href="https://github.com/rashevskyv/kefir-updater/releases" target="_blank">Kefir Updater</a> - программа для обновления kefir через интернет</li>
       <li><a href="https://github.com/Cpasjuste/pplay/releases/latest" target="_blank">pplay</a> - видеоплеер</li>
@@ -390,10 +390,11 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
     <ul>
       <li><a href="https://github.com/cathery/sys-con/releases/latest" target="_blank">sys-con</a> - модуль, позволяющий подключать к консоли по USB практически любые геймпады</li>
       <li><a href="https://github.com/ndeadly/MissionControl" target="_blank">Mission Control</a> - модуль, позволяющий подключать к консоли по bluetooth практически любые геймпады</li>
-      <li><a href="https://gbatemp.net/threads/tesla-the-nintendo-switch-overlay-menu.557362/" target="_blank">Tesla Overlay Menu</a> - специальное оверлей-меню для взаимодействия с системой</li>
+      <li><a href="https://github.com/WerWolv/Tesla-Menu/releases" target="_blank">Tesla Overlay Menu</a> - специальное оверлей-меню для взаимодействия с системой</li>
     </ul>
     <ul>
-      <li><a href="https://gbatemp.net/threads/tesla-the-nintendo-switch-overlay-menu.557362/" target="_blank">ovlEdiZon.ovl</a> - Модуль для <a href="cheats" target="_blank">использования читов</a></li>
+      <li><a href="https://github.com/WerWolv/nx-ovlloader/releases/" target="_blank">nx-ovlloader</a> - процесс для работы с nro через Tesla Menu</li>
+      <li><a href="https://werwolv.net/downloads/EdiZonOverlay.zip" target="_blank">ovlEdiZon.ovl</a> - Модуль для <a href="cheats" target="_blank">использования читов</a></li>
       <li><a href="https://github.com/WerWolv/ovl-sysmodules/releases" target="_blank">ovlSysmodules.ovl</a> - Модуль для включения и отключения установленных системных модулей (как-то разгон, emuuibo и прочее)</li>
     </ul>
   </li>
@@ -500,35 +501,14 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
 
 </div></details>
 
-<details class="spoiler"><summary class="spoiler-title">Обновление кефира прямо на приставке (не рекомендуется!)</summary><div class="spoiler-body">
+<details class="spoiler"><summary class="spoiler-title">Обновление кефира прямо на приставке</summary><div class="spoiler-body">
 <ol>
-  <li>Запустите <strong>NX Shell</strong> через <a href="hbl" target="_blank">HBL</a></li>
-  <li>Перейдите в папку <code class="language-plaintext highlighter-rouge">atmosphere/contents</code>
-    <ul>
-      <li>Если такой папки нет, перейдите в папку <code class="language-plaintext highlighter-rouge">atmosphere/titles</code></li>
-    </ul>
-  </li>
-  <li>Удалите папки со следующими названиями (если они там есть):
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">010000000000100D</code></li>
-      <li><code class="language-plaintext highlighter-rouge">0100000000000032</code></li>
-      <li><code class="language-plaintext highlighter-rouge">0100000000000034</code></li>
-      <li><code class="language-plaintext highlighter-rouge">0100000000000036</code></li>
-      <li><code class="language-plaintext highlighter-rouge">010000000000000D</code></li>
-      <li><code class="language-plaintext highlighter-rouge">420000000000000E</code></li>
-      <li><code class="language-plaintext highlighter-rouge">0100000000001000</code></li>
-      <li><code class="language-plaintext highlighter-rouge">0100000000000352</code></li>
-      <li><code class="language-plaintext highlighter-rouge">4200000000000010</code></li>
-      <li><code class="language-plaintext highlighter-rouge">010000000007E51A</code></li>
-    </ul>
-  </li>
-  <li>Нажмите (Start), чтобы закрыть <strong>NX Shell</strong></li>
   <li>Выберите <strong>Kefir Updater</strong>
     <ul>
       <li>Требуется подключение к интернету!</li>
     </ul>
   </li>
-  <li>Выберите ОС, которую используете</li>
+  <li>Нажмите “<strong>Update Kefir</strong>”</li>
   <li>По окончанию установки, перезагрузите приставку</li>
 </ol>
 
@@ -596,7 +576,7 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
 <h3 id="изменения-от-прошлой-версии">Изменения от прошлой версии</h3>
 
 <p>ВНИМАНИЕ!!! 
-SXOS в кефире теперь только для запуска Atmosphere. Ушла эпоха.</p>
+SXOS в кефире теперь только для запуска Atmosphere!</p>
 
 <ul>
   <li>[Исправлено] Исправлена ошибка, не позволявшая консолям на Erista загружаться
@@ -604,17 +584,10 @@ SXOS в кефире теперь только для запуска Atmosphere.
       <li>ВАЖНО! Нужно сделать обязатально Cleanup хотя бы раз!</li>
     </ul>
   </li>
-  <li>[Обновлено] Atmosphere 0.17.1 (форк с фиксом blank_prodinfo) - полная поддержка Mariko</li>
-  <li>[Обновлено] Hekate 5.5.3</li>
-  <li>[Обновлено] DBI v216 - работа с внешними USB включена по-умолчанию. Для отключения создайте файл 
-<code class="language-plaintext highlighter-rouge">/switch/dbi.no.libusbhsfs</code></li>
-  <li>[Обновлено] pPlay - без изменения версии, но с поддержкой внешних USB-носителей</li>
-  <li>[Удалено] ChoiDujourNX 1.0.2 - не используется в Atmosphere, да и в целом опасен</li>
-  <li>[Удалено] SXOS - прощай, старый друг. Мы тебя не забудем..</li>
-  <li>[Замена] Полноценный SX OS заменён на SX Gear, через него теперь цепочка и работает. 
-Это позволило обойти ошибку “BEK is Missing” на Mariko</li>
-  <li>[Добавлено] Full stock и Stock на отдельных кнопках. Full Stock даст чистую прошивку вообще без патчей.
-После перезагрузки стока потребуется снова пробрасывать пейлоад. Stock (semi-stock) работает как раньше.</li>
+  <li>[Обновлено] Atmosphere 0.18.0 (форк с фиксом blank_prodinfo) - полная поддержка Mariko</li>
+  <li>[Обновлено] pPlay 3.4</li>
+  <li>[Обновлено] Kefir updater - приложение полностью переписано</li>
+  <li>[Обновлено] Скрипт установки кефира - убран выбор прошивки на старте скрипта. По-умолчанию ставится версия для чипованных, благо она отличается всего лишь наличием двух лишних файлов в корне карты памяти. Без них можно поставить через опции установщика кефира.</li>
 </ul>
 
 <hr />
