@@ -396,8 +396,8 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
 
 </div></details>
 
-<details class="spoiler"><summary class="spoiler-title">Мой свитч имеет прошивку версии X.X.X, смогу ли я его прошить?</summary><div class="spoiler-body">
-<p><strong>О:</strong> <a href="check.customfw.xyz" target="_blank">Проверяйте</a></p>
+<details class="spoiler"><summary class="spoiler-title">У моего свитча прошивка версии X.X.X, смогу ли я его прошить?</summary><div class="spoiler-body">
+<p><strong>О:</strong> <a href="https://check.customfw.xyz" target="_blank">Проверяйте</a></p>
 
 </div></details>
 
@@ -558,8 +558,26 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
 </div></details>
 
 <details class="spoiler"><summary class="spoiler-title">Как перенести EmuNAND на другую карту</summary><div class="spoiler-body">
-<p>Если EmuNAND сделан на отдельном разделе, то следует воспользоваться программой <a href="https://gbatemp.net/threads/emutool-move-partition-emu-on-another-sd-switch-emu-type-on-sxos-and-more.550756/" target="blank_">EmuTool</a>
-Если же EmuNAND создан в виде файлов, то он переносится простым копированием</p>
+<p>Если EmuNAND создан в виде файлов, то он переносится простым копированием</p>
+
+<p>Если на разделе, проделайте следующее:</p>
+
+<ol>
+  <li>Вставьте в ПК карту памяти приставки</li>
+  <li>Создайте папку <code class="language-plaintext highlighter-rouge">EmuMMC</code>, а в ней текстовый файл <code class="language-plaintext highlighter-rouge">emummc.ini</code></li>
+  <li>Сохраните в этом текстовом файле следующие строки:</li>
+</ol>
+
+<p><code class="language-plaintext highlighter-rouge">[emummc]
+enabled=1
+sector=0x2
+path=emuMMC/ER00
+id=0x0000
+nintendo_path=Emutendo</code></p>
+
+<ol>
+  <li>Запустите EmuMMC через “<strong>Launch</strong>” -&gt; “<strong>CFW EmuMMC</strong>” в hekate</li>
+</ol>
 </div></details>
 
 <details class="spoiler"><summary class="spoiler-title">Я включил в hekate автозагрузку прошивки, как мне теперь зайти в саму hekate?</summary><div class="spoiler-body">

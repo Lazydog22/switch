@@ -535,9 +535,27 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
 
     <p class="text-center notice--info"><img src="/images/screenshots/atmo_emu.png" alt="" /></p>
   </li>
+</ol>
+
+<p>Если вы выбирали “<strong>Format USER (all data in partition will be lost)</strong>” в момент уменьшения EmuNAND, проделайте следующее:</p>
+
+<ol>
   <li>Запустите <strong>DBI</strong> через <strong>Альбомы</strong> и обратите внимание на размер <strong>NAND</strong>, он должен совпадать с тем, который вы указали в NxNandManager
     <ul>
       <li>Нужно смотреть не на количество свободного места, а на общее количество места</li>
+    </ul>
+  </li>
+  <li>Подключите приставку к ПК кабелем</li>
+  <li>Запустите <strong>DBI</strong></li>
+  <li>Нажмите “<strong>Run MTP Responder</strong>”
+    <ul>
+      <li>На ПК в “<strong>Мой компьютер</strong>” появится новое устройство “<strong>Switch</strong>”</li>
+    </ul>
+  </li>
+  <li>Перейдите в “<strong>Мой компьютер</strong>” -&gt; “<strong>Switch</strong>” -&gt; “<strong>Saves</strong>” и удалите всё содержимое папок “<strong>Installed Games</strong>” и “<strong>Unnstalled Games</strong>”
+    <ul>
+      <li>Это удалит все записи оставшиеся от сохранений из системы.</li>
+      <li>Если по каким-то причинам у вас нет возможности удалить сохранения через DBI, удалите их вручную через <strong>Системные настройки</strong></li>
     </ul>
   </li>
 </ol>
