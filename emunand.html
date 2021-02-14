@@ -489,16 +489,22 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
 <details class="spoiler"><summary class="spoiler-title">Уменьшение EmuNAND в программе NxNandManager</summary><div class="spoiler-body">
 <p>В этой части рассказывается как уменьшить EmuNAND до 10Gb. Часть полностью опциональная и её можно пропустить. ПО, используемое для действий, описанных ниже, доступно только для Windows.</p>
 
-<p class="notice--warning">Прежде чем приступить к этому разделу, обязательно скопируйте папку <code class="language-plaintext highlighter-rouge">sxos/emunand</code> на ПК, если ещё не делали этого. В программе же выбирайте те файлы, что находятся у вас <strong>на карте памяти</strong>. Если после проделанных манипуляций что-то перестанет работать, вы всегда сможете просто вернуть обратно те файлы, что вы скопировали на ПК и получить работоспособный EmuNAND.</p>
-
 <ol>
   <li>Выключите Switch и вставьте его карту памяти в ПК</li>
-  <li>Скопируйте на ПК папку <code class="language-plaintext highlighter-rouge">emuMMC/SD00/eMMC</code> (вместо <code class="language-plaintext highlighter-rouge">SD00</code> может быть другое название). <strong>Далее мы будем работать именно с этой папкой!</strong></li>
-  <li>Скачайте и распакуйте на ваш ПК программу <a href="https://github.com/eliboa/NxNandManager/releases/latest" target="_blank">NxNandManager</a></li>
+  <li><strong>Переместите</strong> на ПК папку <code class="language-plaintext highlighter-rouge">emuMMC/SD00/eMMC</code> (вместо <code class="language-plaintext highlighter-rouge">SD00</code> может быть другое название). <strong>Далее мы будем работать именно с этой папкой!</strong>
+    <ul>
+      <li><strong>ВНИМАНИЕ!</strong> Путь к папке, в которую вы скопируете эти файлы, не должен содержать ничего, кроме символов латиницы. Рекомендуется скопировать папку в корень какого-либо диска.</li>
+    </ul>
+  </li>
+  <li>Скачайте и распакуйте на ваш ПК программу <a href="https://github.com/eliboa/NxNandManager/releases/latest" target="_blank">NxNandManager</a>
+    <ul>
+      <li><strong>ВНИМАНИЕ!</strong> Путь к папке, в которую вы распакуете программу, не должен содержать ничего, кроме символов латиницы. Рекомендуется распаковать папку с программой в корень какого-либо диска.</li>
+    </ul>
+  </li>
   <li>Запустите программу <a href="https://github.com/eliboa/NxNandManager/releases/latest" target="_blank">NxNandManager</a></li>
   <li>Перейдите в <strong>File</strong> -&gt; <strong>Open File</strong> и выберите файл <code class="language-plaintext highlighter-rouge">emuMMC/SD00/eMMC/00</code> (вместо <code class="language-plaintext highlighter-rouge">SD00</code> может быть другое название) из вашей карты памяти
     <ul>
-      <li>Вы должны выбирать файлы, находящиеся на карте памяти, не те, которые скопировали на ПК!</li>
+      <li>Если появится ошибка, убедитесь, что в пути к программе или файлам эмунанда нет пробелов, кириллицы, или других специальных символов! Если это не помогло, попробуйте перезапустить программу или перезагрузить ПК. Если у вас есть подозрения, что EmuNAND может быть повреждён, попробуйте открыть его с помощью <a href="https://switchtools.sshnuke.net/" target="_blank">HacDiskMount</a></li>
     </ul>
   </li>
   <li>Перейдите в <strong>Options</strong> -&gt; <strong>Configure keyset</strong>, нажмите <strong>Import keys from file</strong> и выберите файл <code class="language-plaintext highlighter-rouge">switch/prod.keys</code>, расположенный на карте памяти вашей приставки</li>
@@ -512,7 +518,7 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
 <h3 id="уменьшение-размера-emunand">Уменьшение размера EmuNAND</h3>
 
 <ol>
-  <li>Перейдите в <strong>Options</strong> -&gt; <strong>Resize NAND (RAWNAND, FULLNAND)</strong>
+  <li>Перейдите в <strong>Options</strong> -&gt; <strong>Resize NAND (RAWNAND, FULL NAND)</strong>
     <ul>
       <li>Если вам не нужны сохранения в EmuNAND, поставьте галочку напротив <strong>Format USER (all data in partition will be lost)</strong></li>
     </ul>
@@ -522,18 +528,18 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
      * В поле <strong>Total size for new file</strong> будет указан итоговый размер файла EmuNAND после уменьшения размера</li>
   <li>Нажмите <strong>Save as…</strong>, чтобы выбрать место сохранения EmuNAND</li>
   <li>Нажмите <strong>Save</strong>, чтобы сохранить EmuNAND с выбранным размером</li>
-</ol>
+  <li>После того, как эмунанд будет уменьшен, перейдите в <strong>File</strong> -&gt; <strong>Open File</strong> и выберите ваш обрезанный EmuNAND (<code class="language-plaintext highlighter-rouge">RAWNAND.resized</code>)</li>
+  <li>Перейдите в <strong>Options</strong> -&gt; <strong>EmuNAND creation Tool (RAWNAND, FULL NAND)</strong></li>
+  <li>В поле “<strong>NAND</strong>” будет указан путь к обрезанному EmuNAND (<code class="language-plaintext highlighter-rouge">RAWNAND.resized</code>)</li>
+  <li>В поле “<strong>BOOT0</strong>” укажите путь к файлу <code class="language-plaintext highlighter-rouge">BOOT0</code>, который должен лежать в папке с вашим оригинальным EmuNAND, который вы копировали с вашей карты памяти в начале работы</li>
+  <li>В поле “<strong>BOOT1</strong>” укажите путь к файлу <code class="language-plaintext highlighter-rouge">BOOT1</code>, который должен лежать в папке с вашим оригинальным EmuNAND, который вы копировали с вашей карты памяти в начале работы</li>
+  <li>В поле “<strong>Select EmuNAND type</strong>”, выберите “<strong>SD File AMS</strong>”</li>
+  <li>В поле “<strong>Select target volume</strong>”, выберите диск, на который будет установлен EmuNAND</li>
+  <li>
+    <p>Нажмите кнопку “<strong>Create EmuNAND</strong>” и ожидайте окончание копирования</p>
 
-<h3 id="разбиение-emunand-на-части-менее-4х-гб">Разбиение EmuNAND на части менее 4х Гб</h3>
-
-<ol>
-  <li>Скачайте <a href="https://sourceforge.net/projects/fsplit/files/latest/download" target="_blank">File Splitter</a> и распакуйте программу в удобное место</li>
-  <li>Запустите программу и в поле <code class="language-plaintext highlighter-rouge">File</code> укажите путь к сохраненному ранее обрезанному EmuNAND (<code class="language-plaintext highlighter-rouge">RAWNAND.resized</code>)</li>
-  <li>В поле <strong>Split Size</strong> выставьте <strong>3.9 Gigibytes</strong> и нажмите <strong>Start</strong> для начала разбиения</li>
-  <li>По окончанию процесса в папке программы появятся файлы вида <code class="language-plaintext highlighter-rouge">RAWNAND_X(Y).resized</code>, где <strong>X</strong> - порядковый номер файлов, а <strong>Y</strong> - общее количество файлов.</li>
-  <li>Переименуйте файлы в <code class="language-plaintext highlighter-rouge">00</code>, <code class="language-plaintext highlighter-rouge">01</code>, <code class="language-plaintext highlighter-rouge">02</code> и т. п., внимательно соблюдая очерёдность.</li>
-  <li>Перейдите в папку <code class="language-plaintext highlighter-rouge">emuMMC/SD00/eMMC/00</code> (вместо <code class="language-plaintext highlighter-rouge">SD00</code> может быть другое название) на карте памяти свитча и удалите все файлы вида <code class="language-plaintext highlighter-rouge">00</code>, <code class="language-plaintext highlighter-rouge">01</code>, <code class="language-plaintext highlighter-rouge">02</code> и т. п.</li>
-  <li>Переместите все файлы вида <code class="language-plaintext highlighter-rouge">00</code>, <code class="language-plaintext highlighter-rouge">01</code>, <code class="language-plaintext highlighter-rouge">02</code> и т. п. из папки с программой <strong>File Splitter</strong> в папку <code class="language-plaintext highlighter-rouge">emuMMC/SD00/eMMC/00</code> (вместо <code class="language-plaintext highlighter-rouge">SD00</code> может быть другое название)</li>
+    <p class="text-center notice--info"><img src="/images/screenshots/nxnm_enct.png" alt="" /></p>
+  </li>
   <li>Вставьте карту памяти обратно в приставку и включите Switch</li>
   <li>
     <p>После того, как приставка загрузится, перейдите в <strong>Системные настройки</strong> -&gt; <strong>Система</strong>. В строке ниже <strong>Обновления системы</strong> будет написана версия вашего системного ПО, версия Atmosphere и буква <strong>S</strong> или <strong>E</strong>, где <strong>S</strong> будет означать <em>SysNAND</em>, а <strong>E</strong> - <em>EmuNAND</em>. <em>Вы должны находиться в EmuNAND</em>.</p>
