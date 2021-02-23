@@ -7,7 +7,7 @@ author_profile: true
 
 {% spoiler После проброса плейлоада и появления сплешскринов, консоль висит в черном экране. %}
 
-Отформатируйте вашу карту памяти в [FAT32](format.customfw.xyz){:target="_blank"}. 
+Отформатируйте вашу карту памяти в [FAT32](https://format.customfw.xyz){:target="_blank"}. 
 
 Если не помогает, переустановите {% include abbr/kefir_addr.txt %} начисто. Для этого удалите с карты памяти всё, кроме папки Nintendo и emummc (или sxos/emunand) и ставьте кефир заново
 
@@ -19,7 +19,7 @@ author_profile: true
 {: .text-center}
 {: .notice--info}
 
-Отформатируйте вашу карту памяти в [FAT32](format.customfw.xyz){:target="_blank"}. 
+Отформатируйте вашу карту памяти в [FAT32](https://format.customfw.xyz){:target="_blank"}. 
 
 Если не помогает, переустановите {% include abbr/kefir_addr.txt %} начисто. Для этого удалите с карты памяти всё, кроме папки Nintendo и emummc (или sxos/emunand) и ставьте кефир заново
 
